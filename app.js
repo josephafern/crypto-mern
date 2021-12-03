@@ -12,8 +12,12 @@ mongoose
   .catch(err => console.log(err));
 
 app.get('/', (req, res) => res.send("Server is up!"));
+
 app.use("/api/users", users);
+app.use("/api/prices", prices);
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.raw({ extended: false }));
 app.use(bodyParser.json());
+
 app.listen(port, () => console.log(`Server is running on port ${port}`));
