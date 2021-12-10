@@ -4,6 +4,7 @@ const validText = require('./valid-text');
 module.exports = function validateCurrencyInput(data) {
   let errors = {};
 
+  //Premade validText validator
   data.name = validText(data.name) ? data.name : '';
   data.description = validText(data.description) ? data.description : '';
 
