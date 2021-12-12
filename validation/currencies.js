@@ -1,6 +1,7 @@
 const Validator = require('validator');
 const validText = require('./valid-text');
 
+//For more info, check out Mongo.db documentation on validations
 module.exports = function validateCurrencyInput(data) {
   let errors = {};
 
